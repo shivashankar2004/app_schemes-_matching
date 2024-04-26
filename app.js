@@ -20,7 +20,7 @@ app.post('/match', (req, res) => {
   const { age, conditions } = req.body;
   const matchedSchemes = healthSchemes.filter(scheme => {
     if (age >= scheme.minAge && age <= (scheme.maxAge || Number.MAX_SAFE_INTEGER)) {
-      return conditions.every(condition => scheme.conditions.includes(condition));
+      return healthSchemes.every(condition => scheme.conditions.includes(conditions));
     }
     return false;
   });
