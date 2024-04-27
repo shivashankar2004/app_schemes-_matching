@@ -7,11 +7,8 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
-const healthSchemes = [
-  { id: 1, name: 'Basic Health Plan', minAge: 18, maxAge: 40, conditions: ['Hypertension'] },
-  { id: 2, name: 'Senior Health Plan', minAge: 60, conditions: ['Diabetes', 'Heart Disease'] },
-];
-
+//schemes from data.js
+const healthSchemes = require('./data')
 app.get('/', (req, res) => {
   res.render('match', { schemes: [] });
 });
