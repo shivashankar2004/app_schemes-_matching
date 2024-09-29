@@ -77,7 +77,7 @@ app.post('/login', async (req, res) => {
   }
 });
 
-app.put('/book', async (req, res) => {
+app.put('/update', async (req, res) => {
   try {
     const { name, details } = req.body;
 
