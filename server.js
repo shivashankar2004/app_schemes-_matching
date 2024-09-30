@@ -74,7 +74,7 @@ app.post('/login', async (req, res) => {
   } catch (error) {
       console.error("Error handling /login route:", error);
       res.status(500).json({ error: error.message });
-  }
+  } 
 });
 
 app.put('/update', async (req, res) => {
