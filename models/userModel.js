@@ -16,10 +16,19 @@ const patientSchema = new Schema({
     min: 0   , 
     default: 0             // Age can't be negative
   },
-  healthCondition: {
-    type: String,      // Makes sure the health condition field is mandatory
-    trim: true,
-    default: ''             // Removes any leading/trailing spaces
+  gender: {
+    type: String,
+    default:'',
+    trim: true
+  },
+  employmentStatus: {
+    type: String,
+    default:'',
+    trim: true
+  },
+  governmentEmployee: {
+    type: String,
+    default:''
   }
 });
 const userSchema = new Schema({

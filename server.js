@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
@@ -7,7 +6,7 @@ const mongoose = require('mongoose');
 const User = require('./models/userModel.js');
 const cors = require('cors');
 const bcrypt = require('bcrypt');
-
+const schemes = require('./data/schemes');
 const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
@@ -128,4 +127,55 @@ app.post('/match', (req, res) => {
   res.render('search', { schemes: matchedSchemes });
 });
 
+app.get('/recommend/:name', async (req, res) => {
+  try {
+    // Get the user from the database
+    console.log(`Received request for user: ${req.params.name}`)
+    const user = await User.findOne({name:req.params.name});
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
+    }
 
+    const patientDetails = user.details;
+
+    // Filter schemes based on patient details
+    const recommendedSchemes = schemes.filter((scheme) => isEligible(patientDetails, scheme));
+
+    if (recommendedSchemes.length === 0) {
+      return res.json({ message: "No schemes available for this user." });
+    }
+
+    return res.json(recommendedSchemes);
+  } catch (error) {
+    console.error("Error fetching recommended schemes:", error);
+    return res.status(500).json({ message: "Server error" });
+  }
+});
+
+function isEligible(patient, scheme) {
+  const {
+    age,
+    community,
+    employmentStatus,
+    gender,
+    income,
+    governmentEmployee
+  } = patient;
+
+  return (
+    // Check age range
+    age >= scheme.age.min &&
+    age <= scheme.age.max &&
+    // Check community (if specified in the scheme)
+    (scheme.community === "Any" || scheme.community === community) &&
+    // Check employment status (if specified)
+    (scheme.employmentStatus === "Any" || scheme.employmentStatus === employmentStatus) &&
+    // Check gender (if specified)
+    (scheme.gender === "Any" || scheme.gender === gender) &&
+    // Check income range
+    income >= scheme.income.min &&
+    income <= scheme.income.max &&
+    // Check if the scheme is for government employees or not
+    scheme.isGovEmployee === governmentEmployee
+  );
+}
