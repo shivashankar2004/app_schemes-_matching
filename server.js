@@ -163,19 +163,19 @@ function isEligible(patient, scheme) {
   } = patient;
 
   return (
-    // Check age range
+    
     age >= scheme.age.min &&
     age <= scheme.age.max &&
-    // Check community (if specified in the scheme)
+    
     (scheme.community === "Any" || scheme.community === community) &&
-    // Check employment status (if specified)
+  
     (scheme.employmentStatus === "Any" || scheme.employmentStatus === employmentStatus) &&
-    // Check gender (if specified)
+    
     (scheme.gender === "Any" || scheme.gender === gender) &&
-    // Check income range
+    
     income >= scheme.income.min &&
     income <= scheme.income.max &&
-    // Check if the scheme is for government employees or not
+   
     scheme.isGovEmployee === governmentEmployee
   );
 }
