@@ -29,7 +29,9 @@ async function database() {
 }
 
 database();
-
+  app.get('/',async(req , res)=>{
+    
+  })
 app.post('/register', async (req, res) => {
   try {
       const { name, password, details } = req.body;

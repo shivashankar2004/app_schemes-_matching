@@ -49,7 +49,9 @@ const schemes = [
       income: { min: 0, max: 30000 },
       isGovEmployee: false,
       description: "Housing scheme for individuals with lower income."
-    }
+      
+    },
+   
   ];
   
   module.exports = schemes;
