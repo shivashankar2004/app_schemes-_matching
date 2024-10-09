@@ -1,0 +1,110 @@
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.main1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: url(./Images/image.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    width: 100%;
+    overflow-y: auto; /* Scroll only inside the main content area */
+}
+
+.container {
+    background-color: rgba(5, 5, 72, 0.5); /* Slight transparency */
+    max-width: 700px;
+    padding: 40px 50px;
+    margin-left: -30px; /* Adjusted to fit */
+    margin-bottom: 30px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), 
+                0 0 15px rgba(173, 216, 230, 0.4), 
+                0 0 25px rgba(173, 216, 230, 0.6), 
+                0 0 35px rgba(135, 206, 250, 0.7);
+    backdrop-filter: blur(8px); /* Glass effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-height: calc(100vh - 60px); /* Prevents overflow beyond the viewport */
+    width: 100%; /* Ensures it uses full available width */
+    overflow-y: auto; /* Enable scrolling inside the container */
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 
+                0 0 20px rgba(173, 216, 230, 0.5),
+                0 0 30px rgba(173, 216, 230, 0.7), 
+                0 0 40px rgba(135, 206, 250, 0.9);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+input[type="text"], input[type="number"], select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1.1rem;
+    color: white;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="submit"] {
+    background-color: white;
+    color: #003366;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 140px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    input[type="text"], input[type="number"], select {
+        padding: 12px;
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,589 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-color: rgb(0, 0, 33);
+                overflow-x: hidden;
+                margin-left: -10px;
+            }
+            .img1{
+                background-image:url("ecg6.gif");
+                background-repeat: no-repeat;
+                background-size: cover;
+                height:100%;
+                flex:1;
+            }
+            /* styles.css */
+
+/* styles.css */
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px; /* Increased padding for a more spacious look */
+    background-color: #000000; /* Darker background */
+    color: white;
+    position: fixed; /* Keep the header fixed */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex; /* Aligns the image and text horizontally */
+    align-items: center; /* Vertically centers the content */
+    font-size: 24px; /* Adjust font size as needed */
+    color: white; /* Change text color to white */
+    margin-top: -10px;
+}
+
+.logo-img {
+    margin-left: -20px;
+    width: 100px; /* Adjust the width of the logo as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+    margin-bottom: -20px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+.nav ul li {
+    margin: 0 20px; /* Increased margin for spacing */
+}
+
+/* Apply underline animation only to nav links */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Increased font size for links */
+    position: relative;
+    transition: color 0.3s ease; /* Transition for text color */
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: white; /* Color of the underline */
+    left: 0;
+    bottom: -5px; /* Positioning the underline slightly below the text */
+    transition: width 0.3s ease; /* Smooth transition for underline */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Expand the underline on hover */
+}
+
+.nav-link:hover {
+    color: white; /* Ensure color stays the same during hover */
+}
+
+/* Styles for buttons (login and signup), without underline animation */
+.btn {
+    background-color: rgb(14, 180, 69);
+    color: rgb(255, 255, 255);
+    padding: 10px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 22px; /* Increased font size for buttons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    text-decoration: none; /* Ensure no underline for buttons */
+}
+
+.btn:hover {
+    background-color: rgb(116, 243, 111);
+    color: #333; /* Dark text on hover */
+    text-decoration: none; /* Ensure no underline */
+}
+
+.footer {
+    background-color: #000000; /* Dark footer background */
+    color: white;
+    text-align: center;
+    padding: 30px; /* Increased padding */
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 16px; /* Increased font size for footer */
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+
+            .quot{
+                margin-top: 70px;
+                color:white;
+                font-size:40px;
+                font-family:'Times New Roman', Times, serif;
+                opacity:1;
+                animation-name: example;
+                animation-duration: 3s;
+                animation-delay: 1s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes example {
+                0%{opacity:1}
+                20%{opacity:1}
+                40%{opacity:0.9}
+                60%{opacity:0.8}
+                80%{opacity:0.7}
+            }
+            .box1:hover{
+                opacity:0.8;
+                font-size: 21px;
+                font-weight: bold;
+                margin-top:130px;
+                margin-left:50px;
+                width:400px;
+                height:200px;
+                margin-bottom:5px;
+            }
+            
+            .box1{
+                height:190px;
+                width:380px;
+                margin-top:140px;
+                margin-left:60px;
+                float:left;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-top:10px;
+                padding-left:40px;
+                padding-bottom: 10px;
+                color:black;
+                font-size:20px;
+                background-color: rgb(106, 250, 241);
+                border-style: solid;
+                border-radius: 50px;
+                opacity: 0.7;
+                border-width: 5px;
+                border-color: rgb(0, 0, 0);
+            }
+            .box1 button{
+                list-style-type:none;
+                margin-left:140px;
+                padding:7px;
+                border-radius: 5px;
+                background-color: rgb(21, 21, 126);
+            }
+            .box1 button a{
+                text-decoration: none;
+                font-size: 20px;
+                color:white;
+                font-size: 20px;
+            }
+            .box1 button:hover{
+                padding:12px;
+                transition:.5s;
+            }
+           
+            .box2:hover{
+                opacity:0.8;
+                font-size: 21px;
+                font-weight: bold;
+                margin-top:160;
+                margin-left:960px;
+                margin-right:20px;
+                margin-bottom:10px;
+                width:420px;
+                height:220px;
+            }
+            .box2{
+                margin-top:150px;
+                margin-left:970px;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-top:10px;
+                padding-left:40px;
+                padding-bottom: 10px;
+                width:410px;
+                height:210px;
+                color:black;
+                font-size:20px;
+                background-color: rgb(245, 178, 220);
+                border-style: solid;
+                border-radius: 50px;
+                opacity: 0.7;
+                border-width: 5px;
+                border-color: rgb(0, 0, 0);
+            }
+            .box2 button{
+                list-style-type:none;
+                margin-left:145px;
+                padding:7px;
+                border-radius: 5px;
+                background-color: rgb(87, 5, 61);
+            }
+            .box2 button a{
+                margin-top:-20px;
+                text-decoration: none;
+                font-size: 20px;
+                color:white;
+                font-size: 20px;
+            }
+            .box2 button:hover{
+                padding:12px;
+                transition:.5s;
+            }
+            .img2{
+                margin-top:11%;
+                margin-left:60px;
+                border-radius:20px;
+                width:600px;
+                height:600px;
+                background-size: cover;
+                animation-delay:0ms;
+                animation-name: images;
+                animation-duration: 20s;
+                animation-iteration-count: infinite;
+            }
+            @keyframes images {
+                0%{background-image: url(img1.jpg);}
+                8%{opacity: 0.8;}
+                16%{background-image: url(img2.jpg);}
+                24%{opacity: 0.8;}
+                32%{background-image: url(img3.jpg);}
+                40%{opacity: 0.8;}
+                48%{background-image: url(img4.jpg);}
+                56%{opacity: 0.8;}
+                64%{background-image: url(img5.jpg);}
+                72%{opacity: 0.8;}
+                80%{background-image: url(img6.jpg);}
+                88%{opacity: 0.8;}
+                100%{background-image: url(img1.jpg);}
+            }
+            .pillars{
+                font-size:25px;
+                width:280px;
+                padding-top: 10px;
+                padding-bottom:50px;
+                height:40px;
+                margin-left:660px;
+                margin-top:-22%;
+                color:black;
+            background-color: white;
+                opacity: 1;
+                border-radius: 50px;
+            }
+            .box3{
+                width:330px;
+                height:150px;
+                border-radius: 5px;
+                margin-left:980px;
+                margin-top:-30%;
+                float:left;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-left:20px;
+                padding-bottom: 20px;
+                padding-right:-10px;
+                color:black;
+                font-size:20px;
+                background-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 50px;
+                opacity: 0.9;
+                border-width: 5px;
+                border-color: rgb(0, 0, 0);
+            }
+            .box3:hover{
+                width:350px;
+                height:170px;
+                opacity: 1;
+                padding:20px;
+                margin-left:960px;
+                margin-top:-455px;
+            }
+            .box4:hover{
+                width:350px;
+                height:170px;
+                opacity: 1;
+                padding:20px;
+                margin-left:960px;
+                margin-top:-280px;
+            }
+            .box5:hover{
+                width:350px;
+                height:170px;
+                opacity: 1;
+                padding:20px;
+                margin-left:960px;
+                margin-top:-105px;
+            }
+            .box6:hover{
+                width:350px;
+                height:160px;
+                opacity: 1;
+                padding:30px;
+                margin-left:960px;
+                margin-top:60px;
+            }
+            .box4{
+                width:330px;
+                height:150px;
+                border-radius: 5px;
+                margin-left:980px;
+                float:left;
+                margin-top:-17.5%;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-top:0px;
+                padding-left:20px;
+                padding-bottom: 10px;
+                padding-right:10px;
+                color:black;
+                font-size:20px;
+                background-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 50px;
+                opacity: 0.9;
+                border-width: 5px;
+                border-color: rgb(0, 0, 0);
+            }
+            .box5{
+                width:330px;
+                height:150px;
+                border-radius: 5px;
+                margin-left:980px;
+                margin-top:-5.5%;
+                float:left;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-top:0px;
+                padding-left:20px;
+                padding-right:10px;
+                padding-bottom: 10px;
+                color:black;
+                font-size:20px;
+                background-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 50px;
+                opacity: 0.9;
+                border-width: 5px;
+                border-color: rgb(0, 0, 0);
+            }
+            .box6{
+                width:330px;
+                height:150px;
+                border-radius: 5px;
+                margin-top:95px;
+                margin-left:980px;
+                font-family:Arial, Helvetica, sans-serif;
+                padding-top:0px;
+                padding-left:20px;
+                padding-bottom: 10px;
+                padding-right:10px;
+                color:black;
+                font-size:20px;
+                background-color: rgb(255, 255, 255);
+                border-style: solid;
+                border-radius: 50px;
+                opacity: 0.9;
+                border-width: 5px;
+                border-color: rgb(0, 0, 0);
+            }
+            .para{
+                text-align: justify;
+                margin:30px;
+                font-size: 25px;
+                color:white;
+            }
+            .head{
+                margin-top:40px;
+                font-size: 40px;
+                color:white;
+                text-align: center;
+            }
+            .column1 {
+                opacity: 0.7;
+                margin-left: 23px;
+                text-align: justify;
+                font-size: 20px;
+                background-color: white;
+                border-color: black;
+                border-width: 10px;
+                border-radius: 20px;
+                float: left;
+                width: 31.5%;
+                padding: 10px;
+                height: 450px;
+            }
+            .column1:hover{
+                opacity:1;
+            }
+            .column2:hover{
+                opacity:1;
+            }
+            .column3:hover{
+                opacity:1;
+            }
+            .column2 {
+                opacity: 0.7;
+                text-align: justify;
+                font-size: 20px;
+                background-color: white;
+                border-color: black;
+                border-width: 10px;
+                border-radius: 20px;
+                float: left;
+                width: 31.5%;
+                padding: 10px;
+                height: 450px;
+            }
+            .column3 {
+                opacity: 0.7;
+                text-align: justify;
+                font-size: 20px;
+                background-color: white;
+                border-color: black;
+                border-width: 10px;
+                border-radius: 20px;
+                float: left;
+                width: 31.5%;
+                padding: 10px;
+                height: 450px;
+            }
+            .row:after{
+                content:"";
+                display:table;
+                clear:both;
+            }
+            .img4{
+                padding: 10px;
+                width:1498px;
+                height:320px;
+                margin-left: 30px;
+                background-color: rgb(188, 187, 187);
+                color: black;
+                font-size:xx-large;
+            }
+            .img4 button{
+                margin-left: 620px;
+                background-color:rgb(5, 5, 87);
+                border-radius: 45px;
+                padding: 10px;
+                height:80px;
+                
+            }
+            .img4 button a{
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                font-size: 28px;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img src="image.png" alt="Logo" class="logo-img" /> <b>EHR Connect</b>
+            </div>
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="/dashboard" class="nav-link">Dashboard</a></li>
+                    <li><a href="/about" class="nav-link">About Us</a></li>
+                    <li><a href="/help" class="nav-link">Help</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                    <li><a class="btn" href="/login">Login</a></li>
+                    <li><a class="btn" href="/signup">Signup</a></li>
+                </ul>
+            </nav>
+            
+            </header>
+        <div class="img1">
+            <div class="quot">
+                <pre>
+    
+                              Bytes of data , Miles of Impact
+                              -Unveiling the Supremacy of EHRs!
+                </pre>
+            </div>
+            <div class="box1">
+                <p><b>Wanted to know whether<br>you are eligible for<br>Central and State Government's Health<br>Insurance Schemes?</b></p>
+                <button>
+                    <a href="/form"><b>Click here</b></a>
+                </button>
+            </div>
+            <div class="box2">
+                <p><b>We design essential medical technology<br>to enhance public health by facilitating<br> seamless information storing,improving<br>healthcare coordination and ensuring<br>timely&accurate access to medical data</b></p>
+                <button>
+                    <a href=""><b>Get Started</b></a>
+                </button>
+            </div>
+        </div>
+        <div class="img2">
+            
+        </div>
+        <div class="pillars">
+            <p><b>4 Pillars of EHR Connect</b></p>
+        </div>
+        <div class="box3">
+            <p><b>Explore</b><br>We encourage users to delve into the robust features and capabilities of EHR system,fostering a comprehensive understanding</p>
+        </div>
+        <div class="box4">
+            <p><b>Optimize</b><br>We highlight the system's capacity to streamline proccesses,improve workflowsand enhance overall efficiency in healthcare practices</p>
+        </div>
+        <div class="box5">
+            <p><b>Integrate</b><br>We emphasize seamless integration capabilities of EHR system,ensuring compatibility with existing healthcare infrastructure</p>
+        </div>
+        <div class="box6">
+            <p><b>Elevate</b><br>We communicate the transformative impact of EHR system on patient care,promoting improved outcomes and elevated healthcare standards</p>
+        </div>
+        <br><br>
+        <div class="img3">
+            <div class="head">
+                <p>The EHR of the Future<p>
+            </div>
+            <div class="para">
+                <p>Explore the cutting-edge future of Electronic Health Records (EHR) with our innovative platform. Our website revolutionizes healthcare by seamlessly integrating and optimizing EHR systems. We empower users to delve into robust features, fostering a comprehensive understanding of EHR capabilities. Through streamlined processes, improved workflows, and enhanced efficiency, we elevate healthcare standards. Our commitment lies in promoting patient care outcomes with transformative impacts. Navigate the future of EHR seamlessly, ensuring compatibility with existing healthcare infrastructure. Experience the next generation of EHR technology, where bytes of data translate into miles of impactful healthcare coordination and accessibility.<a style="color:white;" href="learnmore.html">Learn more..</a></p>
+            </div>
+            <div class=row>
+                <div class="column1">
+                    <h2 style="text-align: center;">Data Management</h2>
+                    <img style="width: 400px;height: 200px;margin-left: 30px;" src="data_management.jpg">
+                    <p><b>We ensure efficient data management by digitizing patient information, enabling secure storage, quick retrieval, and seamless sharing among healthcare providers, ensuring accurate and timely healthcare delivery.</b><a href="/about">Learn more..</a></p>
+                </div>
+                <div class="column2">
+                    <h2 style="text-align: center;">Interoperability</h2>
+                    <img style="width: 400px;height: 200px;margin-left: 30px;" src="interoperability.jpg">
+                    <p><b>We ensure adopt standardized data formats and communication protocols which facilitates seamless exchange of patient information , promoting coordinated care and improving overall healthcare efficiency.</b><a href="/about">Learn more..</a></p>
+                </div>
+                <div class="column3">
+                    <h2 style="text-align: center;">Privacy & Security</h2>
+                    <img style="width: 400px;height: 200px;margin-left: 30px;" src="privacy&security.jpg">
+                    <p><b>We provide robust access controls, encryption, and compliance with data protection standards. Rigorous authentication measures and audit trails safeguard patient information, maintaining confidentiality and trust.</b><a href="/about">Learn more..</a></p>
+                </div>
+            </div>
+            <br><br><br><br><br><br>
+        </div>
+        <div class="img4">
+            <pre><b>       Client Satisfaction<i class="fa fa-check-square" aria-hidden="true"></i>                 No of Users<i class="fa fa-user-plus" aria-hidden="true"></i>                 Bookings per month<i class="fa fa-mobile" aria-hidden="true"></i></b></pre>
+            <br><br><br><br>
+            <button>
+                <a href=""><b>Schedule a Demo</b></a>
+            </button>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Contact: 123-456-7890</p>
+                <p>Email: contact@ehrconnect.com</p>
+                <p>&copy; 2024 EHR Connect. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+    </html>
+    
+    </body>
+</html>

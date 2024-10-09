@@ -1,0 +1,291 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-image: radial-gradient( rgb(15, 0, 33), rgb(27, 17, 83));
+                color: white;
+                margin-left: 18px;
+                margin-top: 150px;
+                overflow-x: hidden;
+            }
+            .header {
+                margin-left: -30px;
+                margin-top: -20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px; /* Increased padding for a more spacious look */
+    background-color: #000000; /* Darker background */
+    color: white;
+    position: fixed; /* Keep the header fixed */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex; /* Aligns the image and text horizontally */
+    align-items: center; /* Vertically centers the content */
+    font-size: 24px; /* Adjust font size as needed */
+    color: white; /* Change text color to white */
+    margin-top: 10px;
+    margin-left: -20px;
+}
+
+.logo-img {
+    margin-left: -10px;
+    width: 100px; /* Adjust the width of the logo as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Space between logo and text */
+    margin-bottom: -20px;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+.nav ul li {
+    margin: 0 20px; /* Increased margin for spacing */
+}
+
+/* Apply underline animation only to nav links */
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Increased font size for links */
+    position: relative;
+    transition: color 0.3s ease; /* Transition for text color */
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: white; /* Color of the underline */
+    left: 0;
+    bottom: -5px; /* Positioning the underline slightly below the text */
+    transition: width 0.3s ease; /* Smooth transition for underline */
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Expand the underline on hover */
+}
+
+.nav-link:hover {
+    color: white; /* Ensure color stays the same during hover */
+}
+
+/* Styles for buttons (login and signup), without underline animation */
+.btn {
+    background-color: rgb(14, 180, 69);
+    color: rgb(255, 255, 255);
+    padding: 10px; /* Increased padding */
+    border: none;
+    border-radius: 5px;
+    font-size: 22px; /* Increased font size for buttons */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    text-decoration: none; /* Ensure no underline for buttons */
+}
+
+.btn:hover {
+    background-color: rgb(116, 243, 111);
+    color: #333; /* Dark text on hover */
+    text-decoration: none; /* Ensure no underline */
+}
+
+.footer {
+    background-color: #000000; /* Dark footer background */
+    color: white;
+    text-align: center;
+    padding: 30px; /* Increased padding */
+    position: relative;
+    bottom: 0;
+    margin-top: 20px;
+    margin-left: -15px;
+    width: 100%;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 16px; /* Increased font size for footer */
+    line-height: 1.5; /* Improved line height for readability */
+}
+
+
+            .about{
+                font-size:35px;
+                color:rgb(255, 255, 255);
+                text-align: center;
+            }
+            .inside{
+                font-size:20px;
+                color:rgb(253, 253, 253);
+                text-align: justify;
+                margin-left: 30px;
+                margin-right: 30px;
+            }
+            .column1:hover{
+                opacity:1;
+            }
+            .column2:hover{
+                opacity:1;
+            }
+            .column3:hover{
+                opacity:1;
+            }
+            .column1{
+                opacity: 0.7;
+                margin-left: 10px;
+                float: left;
+                padding: 10px;
+            }
+            .column1 img{
+                border-color: black;
+                border-width: 10px;
+                border-radius: 20px;
+            }
+            .column2 img{
+                border-color: black;
+                border-width: 10px;
+                border-radius: 20px;
+            }
+            .column3 img{
+                border-color: black;
+                border-width: 10px;
+                border-radius: 20px;
+            }
+            .column2{
+                opacity: 0.7;
+                float: left;
+                padding: 10px;
+            }
+            .column3{
+                opacity: 0.7;
+                float: left;
+                padding: 10px;
+            }
+            .row:after{
+                content:"";
+                display:table;
+                clear:both;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <img src="image.png" alt="Logo" class="logo-img" /> <b>EHR Connect</b>
+            </div>
+            
+            <nav class="nav">
+                <ul>
+                    <li><a href="/dashboard" class="nav-link">Dashboard</a></li>
+                    <li><a href="/about" class="nav-link">About Us</a></li>
+                    <li><a href="/help" class="nav-link">Help</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                    <li><a class="btn" href="/login">Login</a></li>
+                    <li><a class="btn" href="/signup">Signup</a></li>
+                </ul>
+            </nav>
+            
+            </header>
+        <div class="inside">
+            <p>Welcome to EHR Connect, where the fusion of cutting-edge healthcare technology and compassionate care defines our commitment to revolutionizing health information management. In the intricate tapestry of healthcare evolution, EHR Connect has emerged as a beacon of innovation, driving positive change in the industry. Our mission is to empower healthcare professionals and patients alike through intuitive, intelligent, and patient-centric Electronic Health Record solutions.</p>
+            <br>
+        </div>   
+        <div class=row>
+            <div class="column1">
+                <img style="width: 450px;height: 250px;margin-left: 10px;" src="ehr1.jpg">
+            </div>
+            <div class="column2">
+                <img style="width: 450px;height: 250px;" src="ehr2.jpg">
+            </div>
+            <div class="column3">
+                <img style="width: 450px;height: 250px; " src="ehr3.jpg">
+            </div>
+        </div>
+        <div class="journey">
+            <img src="group.jpg" style="width: 500px;height:400px;margin-top: 100px;">
+            <p style="font-size: 25px;margin-left: 950px;margin-top:-380px"><b>Our Journey</b></p>
+            <p style="font-size: 20px;text-align: justify;margin-left: 550px;margin-right:20px;">Embark on a transformative journey with EHR Connect, where we pioneer the future of healthcare through cutting-edge Electronic Health Records (EHR). Our story is woven with a passion for excellence, innovation, and a relentless pursuit of improving healthcare outcomes.
+
+                At EHR Connect, we believe in harnessing technology to elevate patient care. Our EHR solutions are designed with a user-centric approach, ensuring seamless integration into healthcare practices. We understand the evolving landscape of the healthcare industry and strive to provide robust EHR systems that adapt and enhance operational efficiency.
+                
+                With a focus on interoperability, our EHR platform ensures that health data flows seamlessly across different systems. We prioritize data security and privacy, implementing stringent measures to safeguard sensitive information. As advocates for a connected healthcare ecosystem, we enable practitioners to access comprehensive patient data, leading to more informed decisions and improved patient outcomes.
+                
+                Join us in shaping the future of healthcare, where innovation converges with compassion. EHR Connect is not just a platform; it's a commitment to empower healthcare professionals and improve the overall well-being of individuals. Experience the difference of a forward-thinking EHR system that propels healthcare into a new era.
+            </p>
+        </div>
+        <div class="mission">
+            <p style="font-size: 25px;margin-left:380px;margin-top:180px"><b>Our Mission</b></p>
+            <p style="font-size: 20px;text-align: justify;margin-left: 20px;margin-right:560px;">Our mission at EHR Connect is to revolutionize healthcare by providing state-of-the-art Electronic Health Record (EHR) solutions. We are driven by a commitment to enhance the accessibility, efficiency, and quality of healthcare services globally.
+
+                We strive to empower healthcare professionals with innovative EHR technology that goes beyond conventional boundaries. Our mission encompasses the integration of cutting-edge features to streamline healthcare workflows, reduce administrative burdens, and ultimately improve patient care.
+                
+                At the core of our mission is a dedication to fostering interoperability and connectivity within the healthcare ecosystem. We aim to break down silos, enabling seamless data exchange among various healthcare providers, ensuring a holistic view of patient health records. This interconnected approach promotes collaboration, leading to better-informed decisions and, consequently, superior patient outcomes.
+                
+                Privacy and security are paramount in our mission. We are unwavering in our commitment to safeguarding sensitive health data, implementing robust measures to ensure compliance with industry standards and regulations. By prioritizing data security, we provide healthcare professionals and patients alike with confidence in the integrity and confidentiality of their information.
+                
+                Join us in our mission to transform healthcare delivery. At EHR Connect, we envision a future where technology bridges gaps, improves efficiencies, and ultimately contributes to healthier communities worldwide.</p>
+                <img src="mission.jpg" style="width: 500px;height:400px;margin-top: -410px;margin-left:1000px">
+        </div>
+        <div class="pillars">
+            <img src="group.jpg" style="width: 500px;height:400px;margin-top: 200px;">
+            <p style="font-size: 25px;margin-left: 850px;margin-top:-480px"><b>4 Pillars of EHR Connect</b></p>
+            <p style="font-size: 20px;text-align: justify;margin-left: 550px;margin-right:20px;"><b>1. Explore</b><br>
+                Delve into the rich features and capabilities of our EHR system. We encourage users to explore its robust functionalities, fostering a comprehensive understanding of how it can revolutionize healthcare practices.
+                
+                <br><br><b>2. Optimize:</b><br>
+                Highlighting the system's capacity to streamline processes, improve workflows, and enhance overall efficiency in healthcare practices. Optimization is at the core of our EHR solution, ensuring a seamless and productive experience for healthcare professionals.
+                
+                <br><br><b>3. Integrate:</b><br>
+                Emphasizing the seamless integration capabilities of our EHR system, ensuring compatibility with existing healthcare infrastructure. Integration promotes data flow across different systems, enhancing coordination and collaboration among healthcare providers.
+                
+                <br><br><b>4.Elevate:</b><br>
+                Communicating the transformative impact of our EHR system on patient care. Our EHR solution is designed to elevate healthcare standards, promoting improved outcomes and contributing to an overall enhancement of the quality of patient care.
+                
+                <br><br>These pillars collectively form the foundation of [Your EHR Website Name], reflecting our commitment to providing a comprehensive and advanced EHR solution that addresses the diverse needs of the healthcare industry.
+            </p>
+        </div>
+        <div class="vision">
+            <p style="font-size: 25px;margin-left:380px;margin-top:180px"><b>Our Vision for Future</b></p>
+            <p style="font-size: 20px;text-align: justify;margin-left: 20px;margin-right:560px;">At EHR Connect, our vision extends beyond the horizon of current healthcare paradigms. We envision a future where healthcare is not just a service but a seamless continuum of well-being, facilitated by cutting-edge technology. Our commitment lies in pioneering the evolution of Electronic Health Records (EHR) to be at the forefront of this transformative journey.
+
+                In the envisioned future, we see EHRs as dynamic hubs of health information, fostering collaboration among healthcare stakeholders. Interconnected and interoperable, these EHR systems will transcend current boundaries, ensuring a holistic approach to patient care. Artificial Intelligence and machine learning will play pivotal roles, offering predictive analytics and personalized treatment insights.
+                
+                Furthermore, our vision includes a healthcare landscape where data security and patient privacy are sacrosanct. We strive to create an ecosystem where individuals have control over their health data while healthcare providers benefit from an interconnected network that facilitates informed decision-making.
+                
+                As we gaze into the future, EHR Connect envisions a healthcare environment characterized by efficiency, innovation, and, above all, a profound improvement in patient outcomes. Join us on this transformative journey as we pave the way for a healthier and technologically advanced tomorrow.
+                
+                
+                
+                
+                
+                </p>
+                <img src="vision.jpg" style="width: 500px;height:400px;margin-top: -410px;margin-left:1000px">
+        </div>
+        <div class="join">
+            <p style="margin-left: 20px;font-size: 25px;"><b><br>Join us on this Journey!!</b></p>
+            <p style="margin-left: 20px;font-size: 20px;text-align: justify;margin-right: 20px;">We extend an invitation to be an integral part of this transformative experience. Whether you are a healthcare professional seeking advanced solutions or a patient yearning for control over your health records, EHR Connect stands as your dedicated partner in the digital healthcare revolution.<br>
+
+                <br>Thank you for choosing EHR Connect as your trusted companion on your health journey.<br>
+                
+                <br><b>-EHR Connect</b></p>
+        </div>
+        <footer class="footer">
+            <div class="footer-content">
+                <p>Contact: 123-456-7890</p>
+                <p>Email: contact@ehrconnect.com</p>
+                <p>&copy; 2024 EHR Connect. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
